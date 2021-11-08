@@ -1,3 +1,5 @@
-Correr la instruccion 
-npm install
-y node index.js
+Grupo 13
+Integrantes:
+- Luis Fuentealba
+- Eduardo Hernández
+- Tomás Montecinos
