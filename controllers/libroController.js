@@ -11,7 +11,7 @@ function guardar(req,res){
         libro.idioma = req.body.idioma
         libro.autor = req.body.autor
 
-        libro.save((err, autostore) => {
+        libro.save((err, librostore) => {
     
             if (err) return res.status(400).send({mensaje:`Error al intentar guardar en base de datos> ${err}`})
     
@@ -41,13 +41,14 @@ function guardar(req,res){
             res.status(200).send({ libro })
         })
     }
-    //modifica un libro por id
+    //modifica un libro por id y atributos en el body
     function modificar(req, res){
+
         let idlibro = req.params.id
-        libro.nombre = req.body.nombre
-        libro.anio = req.body.anio
-        libro.idioma = req.body.idioma
-        libro.autor = req.body.autor
+        nombre = req.body.nombre
+        anio = req.body.anio
+        idioma = req.body.idioma
+        autor = req.body.autor
 
         console.log(req.body)
         console.log(idlibro)
